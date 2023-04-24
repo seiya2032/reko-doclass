@@ -9,26 +9,40 @@ public class SmartPhone {
     String apps; //インストールされたアプリ
 
     //コンストラクタ
-    public SmartPhone(String model, String os){
+    public SmartPhone(String model, String os) {
         this.model = model;
         this.os = os;
+        return;
     }
+
     //メソッド
-    public  void setAccount(Account account) {
+    public void setAccount(Account account) {
         this.account = account;
     }
-    public void displayDeviceInfo(){
+
+    public void displayDeviceInfo() {
         System.out.println(model);
         System.out.println(os);
     }
-    public void displayMyAccount(){
+
+    public void displayMyAccount() {
         System.out.println(account);
     }
-    public boolean addAddressBook(AddressBook){
-        int[] scores = {};
+
+    public boolean addAddressBook(AddressBook a) {
+        for (int i = 0; i < addressBooks.length; i++) {
+            if (i < 10) { //10個まで要素を追加する
+            } else {
+                //配列が満杯になったらfalseを返す
+                System.out.println("false");
+                break;
+
+            }
+        }
         return false;
     }
-    public void displayAppList(){
+
+    public void displayAppList() {
         System.out.println(apps);
     }
 }

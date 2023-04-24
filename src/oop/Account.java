@@ -17,6 +17,6 @@ public class Account {
 
     //メソッド
     public String getAccountInfo() {
-        return " ";
+        return "名前： 電話番号： Eメール： アドレス： ";
     }
 }
