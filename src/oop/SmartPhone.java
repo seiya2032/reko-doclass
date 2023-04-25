@@ -5,8 +5,8 @@ public class SmartPhone {
     String model; // スマホの機種名
     String os; //OSの種類
     Account account; //自分のアカウント情報
-    AddressBook[] addressBooks; //アドレス帳
-    String apps; //インストールされたアプリ
+    AddressBook[] addressBooks = new AddressBook[10]; //アドレス帳
+    String[] apps; //インストールされたアプリ
 
     //コンストラクタ
     public SmartPhone(String model, String os) {
@@ -20,28 +20,28 @@ public class SmartPhone {
     }
 
     public void displayDeviceInfo() {
-        System.out.println(model);
-        System.out.println(os);
+        System.out.println("Model:" + model);
+        System.out.println( "OS" + os);
     }
 
     public void displayMyAccount() {
-        System.out.println(account);
+        System.out.println(account.getAccountInfo());
     }
 
-    public boolean addAddressBook(AddressBook a) {
+    public boolean addAddressBook(AddressBook addressBook) {
         for (int i = 0; i < addressBooks.length; i++) {
-            if (i < 10) { //10個まで要素を追加する
-            } else {
-                //配列が満杯になったらfalseを返す
-                System.out.println("false");
-                break;
-
+            if (addressBooks[i] == null) { //10個まで要素を追加する
+                addressBooks[i] = addressBook;
+                return true;
+                }
             }
-        }
-        return false;
+            return false;
     }
 
     public void displayAppList() {
-        System.out.println(apps);
+        System.out.println("Installed Apps:");
+        for(String app : apps){
+            System.out.println("- " + app);
+        }
     }
 }
