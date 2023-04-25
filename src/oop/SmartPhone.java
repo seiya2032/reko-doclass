@@ -12,7 +12,6 @@ public class SmartPhone {
     public SmartPhone(String model, String os) {
         this.model = model;
         this.os = os;
-        return;
     }
 
     //メソッド
