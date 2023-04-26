@@ -5,7 +5,7 @@ import java.util.Random;
 //クラス宣言
 public class Dice {
     //フィールド（必要に応じて適宜追加）
-    public int lastRoll = 0; //最後に振った目を保持する変数
+    public int lastRoll; //最後に振った目を保持する変数
     //コンストラクタなし
 
     //サイコロを振るメソッド
