@@ -24,8 +24,8 @@ public class SmartPhone {
         System.out.println( "OS" + os);
     }
 
-    public void displayMyAccount() {
-        System.out.println(account.getAccountInfo());
+    public String displayMyAccount() {
+        return (account.getAccountInfo());
     }
 
     public boolean addAddressBook(AddressBook addressBook) {
@@ -38,10 +38,12 @@ public class SmartPhone {
             return false;
     }
 
-    public void displayAppList() {
+    public String displayAppList() {
         System.out.println("Installed Apps:");
         for(String app : apps){
-            System.out.println("- " + app);
+            return ("- " + app);
         }
+        String app = null;
+        return ("- " + null);
     }
 }
